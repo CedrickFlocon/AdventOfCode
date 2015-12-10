@@ -1,8 +1,9 @@
 #!/usr/bin/ruby
+#Result 2341
 
 require './point'
 
-File.open("input.txt", 'r') do |f|
+File.open('input.txt', 'r') do |f|
 
   move = lambda { |p, c|
     if c == '^'

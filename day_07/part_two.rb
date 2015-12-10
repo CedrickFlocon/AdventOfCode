@@ -1,4 +1,5 @@
 #!/usr/bin/ruby
+# Result 14134
 
 require './operation'
 
@@ -30,4 +31,8 @@ def find_equation(letter)
   end
 end
 
-puts find_equation(first_letter).to_s # Result 46065
+b = find_equation(first_letter)
+$found_value = Hash.new()
+$found_value['b'] = b
+
+puts find_equation(first_letter).to_s

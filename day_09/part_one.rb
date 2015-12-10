@@ -1,5 +1,6 @@
 #!/usr/bin/ruby
-#Brut force algorithm of Travelling salesman problem 
+#Brut force algorithm of Travelling salesman problem (cities! possibility)
+#Result 117
 
 #Find the distance between two city
 def find_distance(city_from, city_to)
@@ -8,7 +9,7 @@ end
 
 cities = []
 first_path = ''
-longest_distance = 0
+shortest_distance = 0
 
 #Search all city
 File.open('input.txt', 'r') do |f|
@@ -31,10 +32,10 @@ first_path.scan(/\w/).permutation { |path|
     distance += find_distance(cities[path[i].to_i], cities[path[i + 1].to_i])[0].to_i
   }
 
-  if longest_distance == 0 or distance > longest_distance
-    longest_distance = distance
+  if shortest_distance == 0 or distance < shortest_distance
+    shortest_distance = distance
   end
   distance = 0
 }
 
-puts 'Longest Distance : ' + longest_distance.to_s #Result 909
+puts 'Shortest Distance : ' + shortest_distance.to_s

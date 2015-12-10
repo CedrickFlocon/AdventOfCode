@@ -1,8 +1,9 @@
 #!/usr/bin/ruby
+#Result 258
 
-File.open("input.txt", 'r') do |f|
+File.open('input.txt', 'r') do |f|
 
-  nice_string = 0 #Result 258
+  nice_string = 0
 
   f.each_line do |line|
 

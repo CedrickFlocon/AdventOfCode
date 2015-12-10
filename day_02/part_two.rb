@@ -1,6 +1,7 @@
 #!/usr/bin/ruby
+# Result 3783758
 
-File.open("input.txt", 'r') do |f|
+File.open('input.txt', 'r') do |f|
   total_ribbon_feet = 0
   ribbon_feet = 0
   l, w, h = 0

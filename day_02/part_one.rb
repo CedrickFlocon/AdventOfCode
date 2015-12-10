@@ -1,6 +1,7 @@
 #!/usr/bin/ruby
+# Result 1588178
 
-File.open("input.txt", 'r') do |f|
+File.open('input.txt', 'r') do |f|
   total_square_feet = 0
   square_feet = 0
   l, w, h = 0
